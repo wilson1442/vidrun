@@ -2,9 +2,13 @@
 VIDRUN
 
 Files & paths:
+ 
   • /usr/local/bin/scrollvid.sh     (video generator)
+  
   • /root/vudrun.sh                 (multi-job runner — edit me)
+  
   • /var/log/scrollvid/             (logs; auto-rotated)
+  
   • /etc/cron.d/scrollvid           (runs every 15 minutes)
 
 Quick test (one-off):
