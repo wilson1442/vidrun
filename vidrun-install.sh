@@ -7,7 +7,11 @@ set -euo pipefail
 # - Configures Nginx to serve that folder
 # - Installs scrollvid.sh into /usr/local/bin (PATH) and makes it executable
 
-REPO_SCROLLVID_URL="https://raw.githubusercontent.com/wilson1442/vidrun/refs/heads/main/scrollvid.sh"
+# The raw GitHub URL must use the branch name directly ("/main/...")
+# rather than the full ref path ("/refs/heads/main/..."). The latter
+# 404s, which caused v4 of the installer to fall back to the placeholder
+# wrapper script instead of installing the real scrollvid.sh.
+REPO_SCROLLVID_URL="https://raw.githubusercontent.com/wilson1442/vidrun/main/scrollvid.sh"
 WEBROOT="/var/www/html/public_html"
 NGINX_SITE_NAME="vidrun"
 
